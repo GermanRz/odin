@@ -22,9 +22,22 @@
 
         if (isset($_GET["ruta"])){
 
+        // echo $_GET["ruta"];
+        // exit();
+
             if(
+                $_GET["ruta"]=="contacto" ||
                 $_GET["ruta"]=="inicio" ||
-                $_GET["ruta"]=="gestion_usuarios" 
+                $_GET["ruta"]=="gestion_usuarios" ||
+                $_GET["ruta"]=="roles_permisos" ||
+                $_GET["ruta"]=="dependencias" ||
+                $_GET["ruta"]=="radicacion" ||
+                $_GET["ruta"]=="consulta_seguimiento" ||
+                $_GET["ruta"]=="series_documentales" ||
+                $_GET["ruta"]=="subseries_documentales" ||
+                $_GET["ruta"]=="gestion_tramites" ||
+                $_GET["ruta"]=="reportes"
+
             ){
                 include "modulos/".$_GET["ruta"].".php";
             }//fin de la lista blanca
@@ -33,9 +46,7 @@
             }
 
         } //fin de la captura de la variable ruta
-        include "modulos/inicio.php";
-        
-        
+       
         include "modulos/footer.php";
     
     ?>
