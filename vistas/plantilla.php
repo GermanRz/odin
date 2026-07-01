@@ -26,11 +26,11 @@
         include "modulos/encabezado.php";
         include "modulos/menu.php";
 
+        echo '<div class="content-wrapper">';
+
 
         if (isset($_GET["ruta"])){
 
-        // echo $_GET["ruta"];
-        // exit();
 
             if(
                 $_GET["ruta"]=="contacto" ||
@@ -54,6 +54,7 @@
 
         } //fin de la captura de la variable ruta
        
+        echo '</div>';
         include "modulos/footer.php";
     
     ?>
